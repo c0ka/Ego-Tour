@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<!-- html5文件类型申明 -->
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <!-- 文件编码类型 -->
+    <title>A Html5 Boilerplate</title>
+    <!-- 网页标题，也是搜索引擎的链接显示和历史列表 -->
+    <style type="text/css">
+        body {
+            color: #4e4e4e;
+            font-family: "Helvetica", "MicrosoftYaHei", "Simsun";
+            font-size: 12px;
+            width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        * {
+            margin: 0px;
+        }
+
+        .itinerary {
+            width: 100%;
+            overflow: auto;
+            margin-top: 20px;
+            padding-top: 20px;
+            padding-bottom: 20px;
+            border-top-style: solid;
+            ;
+            border-bottom-style: solid;
+            border-width: 1px;
+            border-color: #e2e2e2;
+        }
+
+        .iti-map {
+            width: 250px;
+            height: 250px;
+            float: left;
+            margin-top: 2px;
+            overflow: hidden;
+            position: relative;
+            /*      background-color: #e2e2e2;  */
+        }
+
+        .map-pic {
+            display: block;
+            position: absolute;
+            right: 0px;
+            top: 0px;
+        }
+
+        .iti-route {
+            width: 530px;
+            float: right;
+        }
+
+        .iti-remark {
+            width: 250px;
+            clear: left;
+            text-align: justify;
+            font-style: italic;
+        }
+
+        table {
+            width: 100%;
+        }
+
+        .tbl-header {
+            height: 120%;
+            text-align: justify;
+            padding: 14px;
+            font-size: 14px;
+            font-weight: bold;
+            background-color: #f2f2f2;
+        }
+
+        .tbl-row-odd {
+            background-color: #fff;
+        }
+
+        .tbl-row-even {
+            background-color: #f2f2f2;
+        }
+
+        th,
+        td {
+            padding: 8px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 地图及日程表 -->
+    <div class="itinerary">
+        <div class="iti-map">
+            <img class="map-pic" src="https://res.rcclchina.com.cn/20160128/1453976967397.jpg">
+        </div>
+        <div class="iti-route">
+            <table>
+                <thead>
+                    <tr class="tbl-header">
+                        <th>日期</th>
+                        <th>港口</th>
+                        <th>抵港时间</th>
+                        <th>启航时间</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="tbl-row-odd">
+                        <td>10月19日</td>
+                        <td>上海</td>
+                        <td>--</td>
+                        <td>17:00 PM</td>
+                    </tr>
+                    <tr class="tbl-row-even">
+                        <td>10月20日</td>
+                        <td>海上巡游</td>
+                        <td>--</td>
+                        <td>--</td>
+                    </tr>
+                    <tr class="tbl-row-odd">
+                        <td>10月21日</td>
+                        <td>广岛</td>
+                        <td>11:00 AM</td>
+                        <td>19:00 PM</td>
+                    </tr>
+                    <tr class="tbl-row-even">
+                        <td>10月22日</td>
+                        <td>高知</td>
+                        <td>08:00 AM</td>
+                        <td>16:00 PM</td>
+                    </tr>
+                    <tr class="tbl-row-odd">
+                        <td>10月23日</td>
+                        <td>海上巡游</td>
+                        <td>--</td>
+                        <td>--</td>
+                    </tr>
+                    <tr class="tbl-row-even">
+                        <td>10月24日</td>
+                        <td>上海</td>
+                        <td>07:00 AM</td>
+                        <td>--</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="iti-remark">
+            邮轮停靠时间和出发时间均为参考时间，具体抵离时间不排除因天气或潮汐等原因导致变化，具体以船上通知为准！
+        </div>
+    </div>
+
+    <style>
+        .detail {
+            margin-top: 20px;
+        }
+
+        .detail-item {
+            border-bottom-style: dashed;
+            ;
+            border-width: 1px;
+            border-color: #e2e2e2;
+            padding-top: 12px;
+            padding-bottom: 12px;
+        }
+
+        .detail-item-title {
+            font-weight: bold;
+            font-size: 14px;
+            padding: 8px;
+        }
+
+        .detail-item-title>* {
+            margin-right: 12px;
+        }
+
+        .detail-item-date {
+            color: #cc0000;
+        }
+
+        .detail-item-des {
+            background-color: #eee;
+            line-height: 24px;
+            padding: 8px;
+        }
+
+        .opt-des {
+            margin-top: 10px;
+            margin-bottom: 10px;
+            padding: 8px;
+            border-radius: 8px;
+            background-color: #f8f8f8;
+        }
+    </style>
+
+    <div class="detail">
+        <div class="detail-item">
+            <div class="detail-item-title">
+                <span class="detail-item-date">第1天</span>
+                <span class="detail-item-ports">上海－广岛</span>
+                <span class="detail-item-time">17:00 / 11:00 + 2</span>
+                <span class="detail-item-meals">餐食：晚</span>
+            </div>
+            <div class="detail-item-des">
+                请您于指定时间地点集合，随领队办理登船及离境手续。登船后建议您参加船上的安全讲解演示活动。晚上邮轮将为您呈现她独特的夜生活美丽：游乐场、歌舞表演、电影院、卡拉ok、夜总会、名仕的士高等等，随心所欲。
+            </div>
+        </div>
+
+        <div class="detail-item">
+            <div class="detail-item-title">
+                <span class="detail-item-date">第2天</span>
+                <span class="detail-item-ports">海上巡游</span>
+                <span class="detail-item-meals">餐食：早/午/晚</span>
+            </div>
+            <div class="detail-item-des">
+                在餐厅吃过丰盛的早餐后，您可以沐浴着阳光在甲板上漫步，您还可以在商场里给自己买些旅游纪念品或挑选些礼物送给亲人朋友，或者您更愿意呆在游泳池里或SPA美容馆里。您可参考&ldquo;每日活动表&ldquo;选择您喜爱的节目，今日赌场、免税商店街、美容院、SPA等地是热点。晚上您可以在豪华的餐厅里悠然品尝香槟，然后在剧院欣赏优雅的艺术表演，这样你在邮轮上就度过了精彩的一天。
+            </div>
+        </div>
+
+        <div class="detail-item">
+            <div class="detail-item-title">
+                <span class="detail-item-date">第3天</span>
+                <span class="detail-item-ports">广岛</span>
+                <span class="detail-item-time">11:00 / 19:00</span>
+                <span class="detail-item-meals">餐食：早/晚</span>
+            </div>
+            <div class="detail-item-des">
+                <p>岸上观光，具体行程以出团通知书为准！含中文导游服务，行程预留自理用餐时间。</p>
+                <p>
+                    备注：邮轮港口停靠时间和出发时间均为参考时间，具体抵离时间不排除因天气或潮汐原因导致变化，具体以邮轮公司为准！
+                </p>
+
+                <div class="opt-des">
+                    <h4>岸上观光A线（约4.5小时，不含餐，699元/人）限量销售，先到先得！</h4>
+                    <hr />
+                    <p>
+                        【严岛神社】(入社门票自理，约日币250元，约人民币15元)是&ldquo;日本三景&rdquo;之一，也是世界上唯一的一座修筑于海上，拥有大鸟居（日式牌楼）和神殿的神社，这里自古以来被认为是有神存在的。传说中那也是因为把整个岛看作神体，当作神圣的信仰对象。严岛神社建于 6 世纪末，在 1168 年，由作为武士首次掌握了政权的平清盛，建成现在这样一个庄严的姿态。以随着潮满潮退而会改变姿态的海为基地，构思大胆，涂成朱色的神殿和背后的绿色原始森林，蓝色的海洋所交织而成的景观，正是象征着日本人对美的意识，这种美强烈地吸引着前来访问的人。
+                    </p>
+                    <p>
+                        【原爆圆顶馆】是第一次被投下原子弹的广岛市最具象征意义的建筑，被视为人们祈求世界永久的和平的标志。这两处世界文化遗产具有非常罕见的价值，常年世界各国专程来拜访的游客络绎不绝。
+                    </p>
+                </div>
+                <div class="opt-des">
+                    <h4>岸上观光B线（约4.5小时，不含餐，699元/人）限量销售，先到先得！</h4>
+                    <hr />
+                    <p>
+                        【锦带桥】,它始建于延宝元年，由第三代岩国藩主吉川广家而建。是架于锦川清流的五连拱木桥，精美和严谨的制作,周边自然的秀美融合为一体.与杭州西湖的锦带桥更是因为同名,成为中日两国的友好象征之一。
+                    </p>
+                    <p>
+                        【原爆圆顶馆】，它是第一次被投下原子弹的广岛市最具象征意义的建筑，被视为人们祈求世界永久的和平的标志。这处世界文化遗产具有非常罕见的价值，常年世界各国专程来拜访的游客络绎不绝。
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="detail-item">
+            <div class="detail-item-title">
+                <span class="detail-item-date">第4天</span>
+                <span class="detail-item-ports">高知</span>
+                <span class="detail-item-time">08:00 / 16:00</span>
+                <span class="detail-item-meals">餐食：早/晚</span>
+            </div>
+            <div class="detail-item-des">
+                <p>岸上观光，具体行程以出团通知书为准！含中文导游服务，行程预留自理用餐时间。</p>
+                <p>
+                    备注：邮轮港口停靠时间和出发时间均为参考时间，具体抵离时间不排除因天气或潮汐原因导致变化，具体以邮轮公司为准！
+                </p>
+
+                <div class="opt-des">
+                    <h4>岸上观光C线（约4.5小时，不含餐，699元/人）限量销售，先到先得！</h4>
+                    <hr />
+                    <p>
+                        【高知城】它位于高知市中心，由第一代土佐藩主山内一丰始建于1601年，现为国家重要文化遗产, 是日本尚存的三座同时保留有天守阁与追手门城堡之一，更是唯一一座可以把二者拍于一张照片的城堡，拍照留念不容错过。<br /> 【西洛梅市场】亲身体验汇集了各具本土特色的百姓店铺，在美食区品尝当地的小吃（自理），总会在不经意间有惊喜的发现。
+                        <p>
+                            【桂滨海滩】曾是历代文人赏月胜地，漫步在沙滩，感受与历史的重叠。海边还有可以观赏海狮表演的水族馆（自理），和与土佐犬小狗亲密接触的土佐犬公园。
+                        </p>
+                        <p>
+                            【综合免税店】自由选购各类免税商品。
+                        </p>
+                </div>
+                <div class="opt-des">
+                    <h4>岸上观光D线（约4.5小时，不含餐，699元/人）限量销售，先到先得！</h4>
+                    <hr />
+                    <p>
+                        【竹林寺】它位于高知市五台山，是真言宗智山派的寺院，本尊是文殊菩萨。寺内环境古朴幽静，还可随时遇到四国&ldquo;遍路&rdquo;的参拜者。
+                    </p>
+                    <p>
+                        【西洛梅市场】亲身体验汇集了各具本土特色的百姓店铺，在美食区品尝当地的小吃（自理），总会在不经意间有惊喜的发现。
+                    </p>
+                    <p>
+                        【综合免税店】自由选购各类免税商品。
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="detail-item">
+            <div class="detail-item-title">
+                <span class="detail-item-date">第5天</span>
+                <span class="detail-item-ports">海上巡游</span>
+                <span class="detail-item-meals">餐食：早/午/晚</span>
+            </div>
+            <div class="detail-item-des">
+                今日邮轮全天航行于海上，您可尽情享受五星级邮轮的各项娱乐设施。早餐后您可根据船上每日指南，选择您感兴趣的游戏或课程参加。当然您也可以悠闲地躺在游泳池畔的躺椅上，什么都不做，什么都不想，只是静静地享受此刻的碧海蓝天。或者您可以到免税店去挑选自己喜欢的物品&hellip;&hellip;总之，丰富多彩的娱乐项目会让您惊喜不断。晚餐后剧院精彩绝伦的歌舞表演秀是一定不要错过的。
+            </div>
+        </div>
+
+        <div class="detail-item">
+            <div class="detail-item-title">
+                <span class="detail-item-date">第6天</span>
+                <span class="detail-item-ports">上海</span>
+                <span class="detail-item-time"> / 07:00</span>
+                <span class="detail-item-meals">餐食：早</span>
+            </div>
+            <div class="detail-item-des">
+                邮轮今天于早晨7:00抵返上海宝山码头，享用早餐后，按顺序办理离船手续，结束愉快的邮轮之旅。
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
