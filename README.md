@@ -1,2 +1,2 @@
 # Ego-Tour
-### a rep storing working html & css files
+### A Rep Storing Working HTML & CSS Files
